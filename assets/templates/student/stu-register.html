@@ -1,0 +1,184 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Visa-Slot-Booking...</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static '/css/appointment.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-edu-meeting.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    <script src="{% static 'student/assets/js/user.js' %}"></script>
+
+  </head>
+
+<body>
+
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                        VISA-VIVA
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-t"><a href="{% url 'index'%}" >Home</a></li>
+                          <li class="scroll-to-sect"><a href="{% url 'sup_login'%}">Supervisor</a></li>
+                          <li class="scroll-to"><a href="{% url 'stu_login'%}" class="active">User</a></li>
+                          <li class="scroll-to"><a href="{% url 'index'%}">Contact Us</a></li> 
+                          
+                        </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <section class="contact-us" id="contact">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="contact" method="post" onsubmit="return validation();" name="myform">
+                {% csrf_token %}
+         
+
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Register Now</h2>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input name="fullname" type="text" id="name" placeholder="FULL NAME..." >
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                    <input name="email" type="text" id="email"  placeholder="YOUR EMAIL..." >
+                  </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input name="contact" type="text" id="subject" placeholder="CONTACT NUMBER...*">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input name="password" type="text" class="message" id="message" placeholder="PASSWORD...">
+                      
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                  <center> 
+                      <button  type="submit"  id="form-submit"  class="button"> <a  style="color:white" role="button">REGISTER NOW</a></button>
+                   </center> 
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+       
+    <div class="footer">
+      <p>Copyright © Codebook. All Rights Reserved. 
+          <br>Design: <a href="https://codebook.in" target="_parent" title="free css templates">Codebook</a></p>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/lightbox.js' %}"></script>
+  <script src="{% static 'assets/js/tabs.js' %}"></script>
+  <script src="{% static 'assets/js/video.js' %}"></script>
+  <script src="{% static 'assets/js/slick-slider.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+  <script>
+
+    {% for msg in messages %}
+
+    swal("Server Response", "{{msg}}");
+    {% endfor %}
+
+  </script>
+  <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+   
+</body>
+
+</html>

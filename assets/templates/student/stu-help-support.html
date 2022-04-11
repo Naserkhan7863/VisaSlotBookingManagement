@@ -1,0 +1,165 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Visa-Slot-Booking...</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static '/css/appointment.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-edu-meeting.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+<!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+  </head>
+
+<body>
+
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                      VISA-VIVA
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li class="scroll-to-sect"><a href="{% url 'index'%}" class="active">Home</a></li>
+                      <li><a href="{% url 'sup_login'%}">Supervisor</a></li>
+                      <li class="scroll-to-se"><a href="{% url 'stu_login'%}">User</a></li>
+                      <li><a href="{% url 'help_support'%}">HELP SUPPORT</a></li>
+                      <li><a href="{% url 'covid_guidelines'%}">Covid Guideline</a></li>
+                      <li class="" ><a href="index.html#contact">Contact Us</a></li> 
+                   </ul>     
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <div class="row" style="justify-content: center; margin:20px">
+
+        <div class="col-lg-8 align-self-center">
+          <div class="row" >
+            <div class="col-lg-12">
+              <form id="contact" action="" method="post">
+                <div class="row" >
+                  <div class="col-lg-12" >
+                    <p><center><h4>HELP SUPPORTS</h4></center>
+                        <center><h4>National Call Centre/IVRS</h4></center><br>
+                    For any information and suggestions on Visa services, please call at 1800-258-1800 (Toll Free) or write to us through accessing the "Feedback" link on the Home Page.<br><br>
+                    
+                    <h5>National Call Centre Timings:</h5><br>
+                    
+                    1.Citizen Service Executive Support: 8 AM to 10 PM.<br>
+                    2.Automated Interactive Voice Response Support: 24 hours.<br><br>
+                    <h6>Note:</h6>  We are temporarily facing connectivity issue at toll free number 1800-258-1800 in Jammu & Kashmir and North East States. Citizens are requested to dial 040-66720567(paid) for J&K and 040-66720581(paid) for NE states. Inconvenience caused is regretted.
+                </p>
+                  </div>
+               
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </center>
+
+    <div class="footer">
+            <p>Copyright © Codebook. All Rights Reserved. 
+                <br>Design: <a href="https://codebook.in" target="_parent" title="free css templates">Codebook</a></p>
+          </div></a></p>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/lightbox.js' %}"></script>
+  <script src="{% static 'assets/js/tabs.js' %}"></script>
+  <script src="{% static 'assets/js/video.js' %}"></script>
+  <script src="{% static 'assets/js/slick-slider.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+  <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+</body>
+</html>

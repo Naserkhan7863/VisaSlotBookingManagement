@@ -1,0 +1,361 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Visa-Slot-Booking..</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-edu-meeting.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    <script src="{% static 'student/assets/js/user.js' %}"></script>
+
+<!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+  </head>
+
+<body>
+
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>VISA-VIVA</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <div class="right-icons">
+            <ul>
+              <li><a href="{% url 'admin_login'%}">Admin</a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          VISA-VIVA
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-sect"><a href="{% url 'index'%}" class="active">Home</a></li>
+                          <li><a href="{% url 'sup_login'%}">Supervisor</a></li>
+                          <li class="scroll-to-se"><a href="{% url 'stu_login'%}">User</a></li>
+                          <li><a href="{% url 'help_support'%}">HELP SUPPORT</a></li>
+                          <li><a href="{% url 'covid_guidelines'%}">Covid Guideline</a></li>
+                          <li class="" ><a href="#contact">Contact Us</a></li> 
+                       </ul>
+
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="{% static 'assets/images/Incredible-Aeroplane.mp4' %}" type="video/mp4"    />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="caption">
+              
+              <h2>Welcome to Visa-Slot-Booking</h2>
+              <p>Welcome to the Visa Information Service for India. On this website you can find information about U.S. immigrant and nonimmigrant visas and the requirements to apply for each. You can also learn how to pay the required visa application fee, and book an interview appointment at the U.S. Embassy in Delhi and the U.S. Consulates General in Kolkata, Chennai, Mumbai and Hyderabad.
+
+                This is the official visa booking appointment website.</p>
+              <div class="main-button-red" style="scroll-behavior: smooth;">
+                  <div class=""><a href="stu-login.html">Join Us Now!</a></div>
+              </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="upcoming-meetings" id="meetings" style="background-image: url('/static/images/photo-160.jfif');">
+    <div class="container" back>
+      <div class="row">
+        <div class="col-lg-12"; style="margin-top:-150px;">
+          <h1 style="color:rgb(104, 56, 100);text-align: center;font-family:italic;text-decoration:underline;font-size:40px;">Over View</h1>
+          
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="categories">
+            <h4>Nonimmigrant Visa Application</h4>
+            <ul>
+              <li><a href="#">Apply for a Visa</a></li>
+              <li><a href="#">Pay My Visa Fee</a></li>
+              <li><a href="#">Schedule My Appointment</a></li>
+              <li><a href="#">Track My Passport</a></li>
+              <li><a href="#">Apply for an Expedited Appointment</a></li>
+            </ul><br>
+            <h5>Closure and Holiday</h5>
+            <div class="main-button-red">
+              <div class="scroll-to-se"><a href="https://in.usembassy.gov/holiday-calendar/?_ga=1.158626866.941567749.1477389913">Check Holiday</a></div>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="categories">
+            
+            <p>•<b>Generally</b>, a citizen of a foreign country who wishes to enter the any Country must first obtain a visa, either a nonimmigrant visa for temporary stay or an immigrant visa for permanent residence.<br> •Citizens of qualified countries may be also able to visit the U.S. without a visa under the Visa Waiver Program.<br> •If you do not qualify for the Visa Waiver Program or are traveling to study, work, or participate in an exchange program, you must apply for a nonimmigrant visa.<br>
+              •Applicants for U.S. visas are required to appear in person for an appointment at the Visa Application Center (VAC) and the visa interview at the U.S. Embassy or Consulate.<br> •You must schedule the VAC appointment at least one day before the interview appointment date.<br>•You can schedule both appointments, either online using this website or through the call center.</p><br>
+           <h4>Ineligibility</h4>
+           <p>Some travelers may not be eligible to enter the Country visa free under the VWP. These include people who have been arrested, even if the arrest did not result in a criminal conviction, those with criminal records (even if subject of a pardon, amnesty, or other act of clemency), certain serious communicable illnesses, those who have been refused admission into, or have been deported from, the U.S., or have previously overstayed on the visa waiver program. Such travelers must apply for a visa. If they attempt to travel without a visa, they may be refused entry into the U.S.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply-now" id="apply">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>Schedule an appointment</h3>
+                <p>Applicants are limited to the number of times they can reschedule their appointments. Please plan accordingly so that you are not required to pay another visa application fee.</p>
+                <div class="main-button-red">
+                  <div class="scroll-to-se"><a href="stu-login.html">Book Now</a></div>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>Change your appointment</h3>
+                <p>Applicants are limited to the number of times they can reschedule their appointments. Please plan accordingly so that you are not required to pay another visa application fee.</p>
+                <div class="main-button-yellow">
+                  <div class="scroll-to-se"><a href="sup-login.html">Change Now</a></div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="accordions is-first-expanded">
+            <article class="accordion">
+                <div class="accordion-head">
+               <center><h4>Supporting Documents</h4></center>
+                </div>
+                <h6>To schedule your  nonimmigrant visa appointment, you must have the following information and documents available:</h5><br>
+                <p>•A passport valid for travel to the another country with a validity date at least six months beyond your intended period of stay in the Country. If more than one person is included in your passport, each person desiring a visa must submit an application.</p><br>
+              <p>•Your visa application (MRV) fee payment receipt</p><br>
+              <p>•Your DS-160 confirmation page</p><br>
+              <p>•Your e-mail address</p><br>
+              <p>•If applicable, required documents based on visa class (such as a petition approval for petition-based visas.)</p>
+              </article>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- <section class="our-facts">
+    <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>For information on the visa interview process, see the videos below:</h2>
+            </div>
+            <div class="col-lg-4 align-self-center">
+               
+              <div class="video">
+                
+                <a href="https://youtu.be/QFF1ddhxyA0" target="_blank"><img src="{% static 'assets/images/play-icon.png' %}" alt=""></a>
+              </div>
+            </div>
+            <div class="col-lg-4 align-self-center">
+              <div class="video">
+                <a   href="https://www.youtube.com/watch?v=E44bSE_XKjI&t=11s" target="_blank"><img src="{% static 'assets/images/play-icon.png' %}" alt=""></a>
+              </div>
+            </div>
+            <div class="col-lg-4 align-self-center">
+              <div class="video">
+                <a href="https://www.youtube.com/watch?v=gRFo8kcBPnI" target="_blank"><img src="{% static 'assets/images/play-icon.png' %}" alt=""></a>
+              </div>
+            </div>          
+          </div>
+    </div>
+  </section> -->
+
+  <section class="contact-us" id="contact">
+    <div class="container" id="1">
+      <div class="row">
+        <div class="col-lg-9 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="contact" action="" method="post" onsubmit="return validation();" name="myform">
+                  {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Contact us</h2>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input name="fullname" type="text" id="name" placeholder="YOURNAME...*" >
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                    <input name="email" type="text" id="email"  placeholder="YOUR EMAIL...">
+                  </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input name="contact" type="text" id="subject" placeholder="Contact Number...*">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" >
+                    </fieldset>
+                  </div>
+                 
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">SUBMIT</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="right-info">
+            <ul>
+              <li>
+                <h6>Phone Number</h6>
+                <span>+91 8555 8879 86</span>
+              </li>
+              <li>
+                <h6>Email Address</h6>
+                <span>info@codebook.in</span>
+              </li>
+             
+              <li>
+                <h6>Website URL</h6>
+                <span>www.codebook.in</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © 2022 Codebook.in All Rights Reserved. 
+          <br>Design: <a href="https://codebook.in" target="_parent" title="free css templates">Codebook</a></p>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/tabs.js' %}"></script>
+    <script src="{% static 'assets/js/video.js' %}"></script>
+    <script src="{% static 'assets/js/slick-slider.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+</body>
+</html>
